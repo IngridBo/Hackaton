@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hackaton | Seventeam</title>
+  <link href="https://fonts.googleapis.com/css?family=Stint+Ultra+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/html/login.html">
+  <link rel="stylesheet" href="/html/registro.html">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>
+      <img src="" alt="">
+    </h1>
+  </header>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="/html/login.html">Ingresar</a>
+    <a href=""></a>
+    <a href=""></a>
+  </nav>
+
+  <section class="content who">
+    <h2 class="title">Seven Team</h2>
+    <p>Somos un sistema de análisis de datos que recopila información en el ámbito de la salud, para comprender y abordar los desafíos en materia de morbilidad. En Colombia, un país diverso y de gran tamaño, el estudio de la morbilidad juega un papel fundamental en la toma de decisiones en el sector de la salud pública. En este espacio, exploraremos cómo los analistas de datos están desempeñando un papel crucial al identificar tendencias y patrones. </p>
+  </section>
+
+  <canvas id="myChart"></canvas>
+
+  <script>
+    // Obtén el contexto del lienzo
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    // Datos para la gráfica
+    var data = {
+      labels: ['BOGOTÁ', 'ANTIOQUIA', 'CUNDINAMARCA', 'CALI', 'VALLE', 'SANTANDER','NORTE DE SANTANDER', 'CORDOBA', 'NARIÑO', 'HUILA'],
+      datasets: [{
+        label: 'No DE INFECTADOS',
+        backgroundColor: 'rgba(0, 123, 255, 0.5)',
+        borderColor: 'rgba(0, 123, 255, 1)',
+        data: [12, 9.6, 5.5, 3.5, 2.5, 3.8, 3.5, 3.0, 3.2, 2.9]
+      }]
+    };
+
+    // Opciones de la gráfica
+    var options = {};
+
+    // Crea la gráfica de barras
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  </script>
+  <section class="content">
+    <h2 class="title">grafic</h2>
+    <img src="/assets/grafico.png" alt="">
+  </section>
+
+
+  <footer>
+    <p>Copyright &copy; 2023</p>
+  </footer>
+</body>
+
+</html>
+
